@@ -1,0 +1,92 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Domine', 'Georgia', serif;
+  --font-sans:
+    'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
+
+  --color-base: #f2f0eb;
+  --color-surface: #ffffff;
+  --color-line: #dfdad0;
+  --color-ink: #24261f;
+  --color-ink-soft: #6b6858;
+  --color-forest: #1f3329;
+  --color-forest-soft: #2c4739;
+  --color-brass: #a9793c;
+  --color-brass-soft: #efe1c9;
+
+  --animate-reveal: reveal 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f2f0eb;
+  color: #24261f;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: #efe1c9;
+  color: #24261f;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.amenity-image {
+  mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+}
+
+.amenities-fade-edges {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

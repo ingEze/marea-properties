@@ -1,0 +1,38 @@
+---
+const pillars = [
+  {
+    title: 'Verificación en persona',
+    body: 'Ningún agente publica una propiedad que no visitó. Fotos, medidas y estado real, sin depender de lo que diga el propietario.',
+  },
+  {
+    title: 'Precio desde el día uno',
+    body: 'Nada de "a consultar". Si el valor no está definido, la propiedad no entra al catálogo todavía.',
+  },
+  {
+    title: 'Un solo interlocutor',
+    body: 'La misma persona que te muestra la propiedad te acompaña hasta la firma. No hay traspasos de carpeta a mitad de proceso.',
+  },
+]
+---
+
+<section class="border-t border-line bg-surface py-24 md:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10">
+    <div class="max-w-xl">
+      <p class="text-sm font-medium text-brass">Cómo trabajamos</p>
+      <h2 class="mt-3 font-display text-3xl text-ink sm:text-4xl">
+        Tres reglas que no negociamos, ni cuando duele el volumen de ventas.
+      </h2>
+    </div>
+
+    <div class="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+      {pillars.map((pillar) => (
+        <div class="border-t-2 border-forest pt-6">
+          <h3 class="font-display text-xl text-ink">{pillar.title}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-soft">
+            {pillar.body}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
