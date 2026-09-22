@@ -227,7 +227,6 @@ export default function ValuationSection() {
                   </div>
                 </div>
 
-                {/* Propiedad */}
                 <div className="border-t border-line pt-6">
                   <p className="mb-4 text-sm font-medium">Sobre la propiedad</p>
 
@@ -298,7 +297,6 @@ export default function ValuationSection() {
                   </div>
                 </div>
 
-                {/* Operación */}
                 <fieldset className="border-t border-line pt-6">
                   <legend className="mb-3 text-sm font-medium">
                     ¿Qué querés hacer? *
